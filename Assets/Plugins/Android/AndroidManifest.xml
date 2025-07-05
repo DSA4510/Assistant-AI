@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.yourcompany.yourapp">
+
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+	<application
+        android:label="@string/app_name"
+        android:theme="@style/UnityThemeSelector"
+        android:icon="@mipmap/app_icon"
+        tools:replace="android:label">
+
+		<!-- Used when Application Entry is set to Activity -->
+		<activity android:name="com.unity3d.player.UnityPlayerActivity"
+                  android:theme="@style/UnityThemeSelector"
+                  android:exported="true">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+			<meta-data android:name="unityplayer.UnityActivity" android:value="true" />
+		</activity>
+
+		<!-- Used when Application Entry is set to GameActivity -->
+		<activity android:name="com.unity3d.player.UnityPlayerGameActivity"
+                  android:theme="@style/BaseUnityGameActivityTheme"
+                  android:exported="true">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+			<meta-data android:name="unityplayer.UnityActivity" android:value="true" />
+			<meta-data android:name="android.app.lib_name" android:value="game" />
+		</activity>
+
+	</application>
+</manifest>
