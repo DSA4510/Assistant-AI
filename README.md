@@ -1,4 +1,4 @@
-# Simple AI chat box with Text-to-Speech and Speech-to-Text intergrated
+Simple AI chat box with Text-to-Speech and Speech-to-Text intergrated
 Including:
 * TTS and STT: using Android plugins, references:
 https://github.com/yasirkula/UnitySpeechToText
